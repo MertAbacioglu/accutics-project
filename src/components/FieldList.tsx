@@ -10,12 +10,10 @@ const FieldList: React.FC = () => {
   const [editedFieldKey, setEditedFieldKey] = useState<string | null>(null);
   const [showField, setShowField] = useState<string | null>(null);
 
-  //function to toggle the field
   const toggleField = (fieldKey: string) => {
     setShowField(showField === fieldKey ? null : fieldKey);
   };
 
-  //function to edit a fields name
   const handleEditField = (fieldKey: string) => {
     const updatedFields = fields.map((f) => {
       if (fieldKey === f.field_key) {
@@ -54,7 +52,7 @@ const FieldList: React.FC = () => {
               marginBottom: "10px",
             }}
           >
-            <FieldItem //passing the props to the FieldComponent
+            <FieldItem
               field={field}
               editedFieldKey={editedFieldKey}
               editedFieldName={editedFieldName}
