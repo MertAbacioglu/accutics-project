@@ -52,7 +52,7 @@ const FieldItem: React.FC<FieldItemProps> = ({
             Cancel
           </button>
         </h3>
-      ) : (//if this field is not beign edited
+      ) : (
         <h1>
           {field.field_name}{" "}
           <button
